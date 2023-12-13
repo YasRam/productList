@@ -14,44 +14,21 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="index.html">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another
-                                    action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something
-                                    else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="pics.html">pics</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
@@ -62,17 +39,25 @@
             <input type="text" class="form-control my-2" id="productName">
             <label for="productPrice">productPrice:</label>
             <input type="text" class="form-control my-2" id="productPrice">
+            <label for="productCount">productCount:</label>
+            <input type="text" class="form-control my-2" id="productCount">
             <label for="productCategory">productCategory:</label>
             <input type="text" class="form-control my-2" id="productCategory">
             <label for="productDesc">productDesc:</label>
             <textarea type="text" class="form-control my-2" id="productDesc"></textarea>
-            <button class="btn btn-outline-info" onclick="addproduct()">add product</button>
+            <button id="mainBtn" class="btn btn-outline-info" >add product</button>
         </div>
+        <div class="d-flex justify-content-center py-3">
+        <input class="form-control me-2 w-50" type="search" placeholder="Search" aria-label="Search" id="Search"
+            onkeyup="searchProduct(this.value)">
+        </div>
+
         <table class="table">
             <thead>
                 <th>Index</th>
                 <th>Name</th>
                 <th>Price</th>
+                <th>count</th>
                 <th>Category</th>
                 <th>Desc</th>
                 <th>Update</th>
